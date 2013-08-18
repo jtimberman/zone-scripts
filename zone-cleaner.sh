@@ -14,5 +14,5 @@ knife node delete $newzone -y
 zoneadm -z $newzone halt
 zoneadm -z $newzone uninstall -F
 zonecfg -z $newzone delete -F
-rm -rf /zones/$newzone
+rm -rf /zones/$newzone ${newzone}.conf
 dladm delete-vnic vnic${newzone}0
